@@ -13,4 +13,20 @@ request('http://www.foxnews.com/', function (error, response, html){
 
 
     console.log(headlineText,realtedItemText)
-})
+})  
+var dataToAdd = {
+    headline: headlineText,
+    summary: realtedItemText,
+    
+  };
+.catch(function(err) {
+
+    res.json({
+      message: "Scrape finished";
+       articles.push(dataToAdd);
+    });
+return articles;
+  });
+
+
+module.exports = scrape;
