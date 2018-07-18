@@ -1,3 +1,6 @@
+
+
+
 var request = require('request');
 var cheerio = require('cheerio');
 var url = "http://www.foxnews.com/"
@@ -13,20 +16,5 @@ request('http://www.foxnews.com/', function (error, response, html){
 
 
     console.log(headlineText,realtedItemText)
+    document.write(headlineText,realtedItemText)
 })  
-var dataToAdd = {
-    headline: headlineText,
-    summary: realtedItemText,
-    
-  };
-.catch(function(err) {
-
-    res.json({
-      message: "Scrape finished";
-       articles.push(dataToAdd);
-    });
-return articles;
-  });
-
-
-module.exports = scrape;
